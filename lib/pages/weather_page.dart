@@ -14,7 +14,7 @@ class WeatherPage extends StatefulWidget {
 
 class _WeatherPageState extends State<WeatherPage> {
   WeatherService _weatherService =
-      WeatherService(apiKey: "750af1a228b80eb5c0674b609fe86308");
+      WeatherService(apiKey: "YOUR_API_KEY_FROM_OPENWEATHERMAP");
   Weather? _weather;
 
   void fetchWeather() async {
@@ -74,17 +74,17 @@ class _WeatherPageState extends State<WeatherPage> {
                 children: [
                     Column(
                       children: [
-                        Icon(
+                        const Icon(
                           Icons.location_pin,
                           color: Colors.redAccent,
                           size: 40,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                         ),
                         Text(
                           _weather?.cityName ?? "Loading",
-                          style: TextStyle(
+                          style: const TextStyle(
                               fontSize: 30, fontWeight: FontWeight.w200),
                         ),
                       ],
